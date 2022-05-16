@@ -29,7 +29,7 @@
   .border-bottom{
     border-bottom: 1px solid #C0C0C0;
   }
-  
+
 
 /*HEADER*/
 
@@ -91,7 +91,7 @@
 
 /*стрелочка в ссылке*/
 .header__link::after {
-  content: " \2192"
+  content: " \2192";
 }
 
 /*Главная картинка header__image*/
@@ -105,12 +105,6 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-}
-
-/*размеры главной картинки main__image*/
-.header__main-image{
-  width: 765px;
-  height: 608px;
 }
 
 /*Синий квадрат*/
@@ -323,6 +317,7 @@
   padding-top: 90px;
   padding-bottom: 90px;
   position: relative;
+  background-color: #1f1f1f;
 }
 
 
@@ -367,11 +362,6 @@
   width: 200px;
   color: white;
   padding-top: 80px;
-}
-
-/*Темный фон*/
-.kaufman__theme_dark {
-  background-color: #1f1f1f;
 }
 
 
