@@ -11,6 +11,7 @@
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
   box-sizing: border-box;
+
 }
 
 /*HEADER*/
@@ -38,11 +39,12 @@
   top: 30px;
   left: 64px;
   z-index: 3;
+  background-image: url(../images/logo_place_header.svg);
 }
 
 /*Заголовок header позиционирование размер блока параметры текста для title*/
 .header__title {
- margin-left: 64px;
+ margin: 0 0 0 64px;
  max-width: 730px;
  width: 100%;
  font-size: 102px;
@@ -87,6 +89,7 @@
   right: 0;
   bottom: 0;
   z-index: 1;
+  object-fit: contain;
 }
 
 /*Синий квадрат позиционирование*/
@@ -135,7 +138,7 @@
 }
 
 /*two-colums__paragraf параметры текста*/
-.two-columns__paragraf {
+.two-columns__paragraph {
   font-size: 24px;
   font-weight: 400;
   line-height: 34px;
@@ -144,7 +147,7 @@
 }
 
 /*отсутп между параграфами*/
-.two-columns__paragraf:last-of-type {
+.two-columns__paragraph:last-of-type {
   padding: 0;
 }
 
@@ -159,8 +162,9 @@
 /*DIGITS*/
 
 .digits {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* заголовок section-title параметры текста и ширина*/
@@ -170,8 +174,7 @@
   line-height: 1.15em;
   width: 60%;
   text-align: center;
-  padding-bottom: 20px;
-  margin: auto;
+  margin: 0 auto 20px;
 }
 
 /*section-subtitle параметры теста и ширина*/
@@ -210,6 +213,7 @@
   width: 250px;
   padding-top: 60px;
   list-style-type: none;
+  box-sizing: border-box;
 }
 
 /*парметры шрифта table__text и отступы*/
@@ -219,6 +223,7 @@
   line-height: 1.2em;
   padding-top: 20px;
   margin: 0;
+  box-sizing: border-box;
 }
 
 
@@ -247,6 +252,7 @@
   text-align: center;
   margin: auto;
   padding-top: 100px;
+  box-sizing: border-box;
 }
 
 /*размер подзаголовка и параметры текста*/
@@ -257,8 +263,7 @@
   max-width: 648px;
   width: 100%;
   text-align: center;
-  padding-top: 70px;
-  margin: auto;
+  margin: 70px auto 0;
 }
 
 /*ссылка feynman__link позиционирование*/
@@ -288,6 +293,7 @@
   padding-bottom: 90px;
   position: relative;
   background-color: #1f1f1f;
+  box-sizing: border-box;
 }
 
 /*размеры блока треугольника позиционирование треуголник*/
@@ -296,7 +302,7 @@
   height: 877px;
   position: absolute;
   right: -210px;
-  top:-1px;
+  top: 0;
 }
 
 /*цвет заголовка*/
@@ -322,9 +328,16 @@
   width: 200px;
   color: white;
   padding-top: 80px;
+  box-sizing: border-box;
 }
 
+.table__cell_theme_dark {
+  color: white;
+}
 
+.table__text_theme_dark {
+  color: white;
+}
 
 /*FOOTER*/
 /*высота блока футер*/
@@ -332,17 +345,20 @@
   background-color: #1f1f1f;
 }
 
+.logo_place_footer{
+  background-image: url(../images/logo_place_footer.svg);
+}
 
 /*ширина блока columns и отступы*/
 .footer__columns {
   width: 90%;
-  padding-bottom: 40px;
+  padding: 60px 0 40px;
   color: white;
   justify-content: space-between;
-  padding-top: 60px;
   margin: auto;
   min-height: 350px;
   display: flex;
+  box-sizing: border-box;
 }
 
 /*колонки*/
@@ -360,11 +376,11 @@
 
 /*отступы автора*/
 .footer__author {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding: 18px 0 18px;
   font-size: 18px;
   line-height: 25px;
   margin: 0;
+  box-sizing: border-box;
 }
 /*2я колонка*/
 
