@@ -331,10 +331,6 @@
   box-sizing: border-box;
 }
 
-.table__cell_theme_dark {
-  color: white;
-}
-
 .table__text_theme_dark {
   color: white;
 }
