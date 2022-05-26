@@ -1,0 +1,7 @@
+.table__cell {
+  color: black;
+  width: 250px;
+  padding-top: 60px;
+  list-style-type: none;
+  box-sizing: border-box;
+}

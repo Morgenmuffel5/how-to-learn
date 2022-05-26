@@ -1,0 +1,16 @@
+.feynman__link {
+  position: absolute;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  top: 50%;
+  right: 48px;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
+/*стрелочка в ссылке*/
+.feynman__link::after {
+  content: " \2192";
+  color: #2f80ed;
+}
