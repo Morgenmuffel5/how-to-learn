@@ -1,4 +1,12 @@
-
+/*кейфрейм для вращения квадрата*/
+@keyframes rotation-move {
+  from {
+    transform: rotate(0deg);
+  }
+   to {
+    transform: rotate(360deg);
+  }
+}
 /*общие правила*/
 
 .page {
@@ -24,6 +32,7 @@
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
+  overflow: hidden;
   /* выше установили ограничения для секции */
 }
 
@@ -89,7 +98,7 @@
   right: 0;
   bottom: 0;
   z-index: 1;
-  object-fit: contain;
+  object-fit: fill;
 }
 
 /*Синий квадрат позиционирование*/
@@ -100,6 +109,10 @@
   position:absolute;
   top: 64px;
   right: 0;
+}
+
+.rotation {
+  animation: rotation-move 20s linear infinite;
 }
 
 
@@ -159,70 +172,117 @@
 
 
 
-/*DIGITS*/
 
-.digits {
-  padding: 100px 0;
+
+
+/*TECHNIQUES*/
+.techniques {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0 0 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+
 }
 
-/* заголовок section-title параметры текста и ширина*/
-.section-title {
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 1.15em;
-  width: 60%;
-  text-align: center;
-  margin: 0 auto 20px;
-}
-
-/*section-subtitle параметры теста и ширина*/
-.section-subtitle {
-  font-size: 27px;
-  font-weight: 400;
-  line-height: 34px;
-  width: 60%;
-  text-align: center;
-  margin: auto;
-}
-
-/*флекс таблица*/
-/*выравнивание эл table__cell*/
-.table {
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: flex-end;
-  width: 1100px;
+/*блок cards позиционирование, flex*/
+.cards {
   display: flex;
+  width: 920px;
+  padding: 0;
   margin: auto;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
+/*снимаем маркеры списка*/
+.cards__item {
+  list-style-type: none;
+  width: 240px;
+  margin-right: 100px;
+  box-sizing: border-box;
+}
 
-/*параметры шрифта заголовка table__heading*/
-.table__heading {
+.cards__item:nth-of-type(3) {
+  margin-right: 0;
+}
+
+.cards__item:nth-of-type(5) {
+  margin-right: 0;
+}
+
+/*размеры картинок округление и отступы*/
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 60px 40px 43px 40px;
+  box-sizing: border-box;
+}
+
+/*заголовки*/
+.cards__title {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.15em;
   margin: 0;
+  text-align: center;
 }
 
-/*цвет текста и ширина убираем маркеру списка*/
-.table__cell {
-  color: black;
-  width: 250px;
-  padding-top: 60px;
-  list-style-type: none;
+/*стили описаний карточек*/
+.cards__description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: center;
+  margin: 0;
+  padding-top: 16px;
   box-sizing: border-box;
 }
 
-/*парметры шрифта table__text и отступы*/
-.table__text {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.2em;
-  padding-top: 20px;
-  margin: 0;
+
+
+
+/*VIDEO*/
+.video {
+  padding-top: 100px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*позиционирование контейнера с видео*/
+.video__iframes {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/**/
+.video__iframe {
+  width: 515px;
+  height: 316px;
+}
+
+.video__iframe:first-child {
+  margin-right: 20px;
+}
+
+
+
+
+/*OAKLEY*/
+.oakley {
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  margin-top: 306px;
+}
+
+.two_colums_padding_size {
+  padding-top: 160px;
   box-sizing: border-box;
 }
 
@@ -286,6 +346,171 @@
 
 
 
+/*DIGITS*/
+
+.digits {
+  padding: 100px 0;
+  box-sizing: border-box;
+}
+
+/* заголовок section-title параметры текста и ширина*/
+.section-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15em;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+/*section-subtitle параметры теста и ширина*/
+.section-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+
+/*флекс таблица*/
+/*выравнивание эл table__cell*/
+.table {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-end;
+  width: 1100px;
+  display: flex;
+  margin: auto;
+  padding: 0;
+}
+
+
+/*параметры шрифта заголовка table__heading*/
+.table__heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15em;
+  margin: 0;
+}
+
+/*цвет текста и ширина убираем маркеру списка*/
+.table__cell {
+  color: black;
+  width: 250px;
+  padding-top: 60px;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+/*парметры шрифта table__text и отступы*/
+.table__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2em;
+  padding-top: 20px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+/*KHAN*/
+
+.khan {
+  padding-top: 105px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+/*позиционирование контейнера с инфо*/
+.khan__container {
+  width: 80%;
+  margin: auto;
+}
+
+/*заголовок-автор*/
+.khan__author {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+/*заголовок-книга*/
+.khan__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.15em;
+  padding-bottom: 50px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*цитата*/
+.khan__quote {
+  max-width: 790px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+}
+
+/*источники*/
+.khan__quote-author {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15em;
+  font-style: normal;
+  padding-top: 36px;
+  box-sizing: border-box;
+}
+
+.khan__quote-author-subline {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.15em;
+  font-style: normal;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+/*контейнер с картинкой*/
+.khan__book-container {
+  display: flex;
+  padding-top: 68px;
+  box-sizing: border-box;
+
+}
+
+/*размер книги*/
+.khan__book-pic {
+  width: 608px;
+  height: 620px;
+  background-image: url(../images/khan-book.jpg);
+  margin-right: 48px;
+}
+
+/*ссылка на покупку*/
+.khan__buy-link {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 42px;
+  color: #2f80ed;
+}
+
+.khan__buy-link::after {
+  content: " \2192";
+  color: #2f80ed;
+}
+
+
+
+
+
 /*KAUFMAN*/
 .kaufman {
   overflow: hidden;
@@ -334,6 +559,41 @@
 .table__text_theme_dark {
   color: white;
 }
+
+
+
+
+/*RESOURCES*/
+.resources {
+  padding: 100px 0 217px;
+  box-sizing: border-box;
+}
+
+.resources__logo-zone {
+  width: 1100px;
+  margin: auto;
+  padding: 80px 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.resources__logo {
+  list-style-type: none;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+}
+
+.resources__link {
+  width: 270px;
+  height: 38px;
+}
+
+
+
+
 
 /*FOOTER*/
 /*высота блока футер*/
