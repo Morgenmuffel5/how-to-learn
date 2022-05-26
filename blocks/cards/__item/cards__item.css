@@ -1,0 +1,13 @@
+.cards__item {
+  list-style-type: none;
+  width: 240px;
+  margin-right: 100px;
+  box-sizing: border-box;
+}
+.cards__item:nth-of-type(3) {
+  margin-right: 0;
+}
+
+.cards__item:nth-of-type(5) {
+  margin-right: 0;
+}
